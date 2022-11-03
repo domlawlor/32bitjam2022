@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/world_Zero_Hook.obj-4492ff5ecb12ee59e74fecd54e27abf9.mesh"
+
+[deps]
+
+files=[ "res://.import/world_Zero_Hook.obj-4492ff5ecb12ee59e74fecd54e27abf9.mesh" ]
+
+source_file="res://Art/Boat/world_Zero_Hook.obj"
+dest_files=[ "res://.import/world_Zero_Hook.obj-4492ff5ecb12ee59e74fecd54e27abf9.mesh", "res://.import/world_Zero_Hook.obj-4492ff5ecb12ee59e74fecd54e27abf9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.025, 0.025, 0.025 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

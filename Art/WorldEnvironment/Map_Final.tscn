@@ -1,0 +1,148 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Art/WorldEnvironment/Map_Final.dae" type="PackedScene" id=1]
+[ext_resource path="res://Shaders/psx_lit.gdshader" type="Shader" id=2]
+[ext_resource path="res://Art/Textures/Foliage.tga" type="Texture" id=3]
+[ext_resource path="res://Art/Textures/Rock_02.png" type="Texture" id=4]
+[ext_resource path="res://Art/Textures/Rock_01.png" type="Texture" id=5]
+[ext_resource path="res://Art/Textures/Map_Main.png" type="Texture" id=6]
+[ext_resource path="res://Art/Textures/Bone.png" type="Texture" id=7]
+[ext_resource path="res://Art/Textures/Home_Base.png" type="Texture" id=8]
+[ext_resource path="res://Shaders/psx_lit_transparent.gdshader" type="Shader" id=9]
+
+[sub_resource type="ShaderMaterial" id=15]
+shader = ExtResource( 9 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 3 )
+
+[sub_resource type="ShaderMaterial" id=16]
+shader = ExtResource( 9 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 3 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 2 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 8 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 2 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 8 )
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 2 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 7 )
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 2 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 6 )
+
+[sub_resource type="ShaderMaterial" id=13]
+shader = ExtResource( 2 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 0, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 2 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 8 )
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = ExtResource( 2 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 8 )
+
+[sub_resource type="ShaderMaterial" id=10]
+shader = ExtResource( 2 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 4 )
+
+[sub_resource type="ShaderMaterial" id=11]
+shader = ExtResource( 2 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 4 )
+
+[sub_resource type="ShaderMaterial" id=12]
+shader = ExtResource( 2 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 5 )
+
+[node name="Map_Final" instance=ExtResource( 1 )]
+
+[node name="Foliage" parent="Final_Export" index="0"]
+material/0 = SubResource( 15 )
+material/1 = SubResource( 16 )
+
+[node name="Shacks" parent="Final_Export" index="1"]
+material/0 = SubResource( 3 )
+material/1 = SubResource( 4 )
+
+[node name="RibCage" parent="Final_Export" index="2"]
+material/0 = SubResource( 5 )
+
+[node name="Map_Main" parent="Final_Export" index="3"]
+material/0 = SubResource( 6 )
+
+[node name="LightHouse_Windows" parent="Final_Export" index="4"]
+material/0 = SubResource( 13 )
+
+[node name="Light_House" parent="Final_Export" index="5"]
+material/0 = SubResource( 8 )
+material/1 = SubResource( 9 )
+
+[node name="Rocks_Large" parent="Final_Export" index="6"]
+material/0 = SubResource( 10 )
+material/1 = SubResource( 11 )
+
+[node name="Rocks_Small" parent="Final_Export" index="7"]
+material/0 = SubResource( 12 )

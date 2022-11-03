@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/32bgj22_SFX_QuestItem.ogg-ad56ab5ae9d75a72fefd5d706aef6511.oggstr"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_QuestItem.ogg"
+dest_files=[ "res://.import/32bgj22_SFX_QuestItem.ogg-ad56ab5ae9d75a72fefd5d706aef6511.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

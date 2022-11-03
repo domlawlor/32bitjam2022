@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/32bgj22_SFX_Canon.ogg-30f7dd0a8e60429fe73d5d1e542f2b92.oggstr"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_Canon.ogg"
+dest_files=[ "res://.import/32bgj22_SFX_Canon.ogg-30f7dd0a8e60429fe73d5d1e542f2b92.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

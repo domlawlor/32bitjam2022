@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/32bgj22_SFX_UI_GameStart.ogg-b0798825dd228747467e729ed4f31239.oggstr"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_UI_GameStart.ogg"
+dest_files=[ "res://.import/32bgj22_SFX_UI_GameStart.ogg-b0798825dd228747467e729ed4f31239.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/32bgj22_SFX_QuestItem.wav-f2dbaece2842e51a2cd694a6e054af1c.sample"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_QuestItem.wav"
+dest_files=[ "res://.import/32bgj22_SFX_QuestItem.wav-f2dbaece2842e51a2cd694a6e054af1c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

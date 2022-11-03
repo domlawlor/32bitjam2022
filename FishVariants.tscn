@@ -1,0 +1,324 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://FishVariants.gd" type="Script" id=1]
+[ext_resource path="res://FishClass.gd" type="Script" id=2]
+[ext_resource path="res://Art/Fish/Common02.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Art/Fish/Mythic01.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Art/Fish/Rare02.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Art/Fish/Rare01.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Art/Fish/Common03.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Art/Fish/Uncommon03.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Art/Fish/Common05.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Art/Fish/Uncommon02.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Art/Fish/Uncommon04.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Art/Fish/Rare03.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Art/Fish/Common04.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Art/Fish/Uncommon01.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Art/Fish/Mythic02.tscn" type="PackedScene" id=15]
+
+[node name="FishVariants" type="Spatial"]
+visible = false
+script = ExtResource( 1 )
+
+[node name="COMMON_1" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Billy Bass"
+speciesDescription = "Common with a beautiul singing voice"
+logbookCameraX = 1.0
+minWeight = 4.0
+maxWeight = 6.0
+timeToReelIn = 13.0
+maxMoveToTargetPosTime = 1.8
+boatTippingAnglePerSec = 7.4
+preHookQTETimeLength = 1.2
+timeToHitQTE = 1.1
+
+[node name="COMMON_2" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Baby Blue"
+speciesDescription = "Small, common, cute"
+id = 1
+logbookCameraX = 1.0
+minPrice = 7
+maxPrice = 15
+minWeight = 5.0
+maxWeight = 10.0
+timeToReelIn = 13.0
+minTimeStaysInSpot = 0.0
+maxTimeStaysInSpot = 0.0
+maxMoveToTargetPosTime = 1.8
+boatTippingAnglePerSec = 7.4
+minDirectionAngleChange = 20.0
+maxDirectionAngleChange = 60.0
+preHookQTETimeLength = 1.2
+timeToHitQTE = 1.1
+meshPackedScene = ExtResource( 3 )
+
+[node name="COMMON_3" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Plutofish"
+speciesDescription = "Has the power to see deep inside your soul"
+id = 2
+logbookCameraX = 1.0
+minPrice = 10
+maxPrice = 15
+minWeight = 7.0
+maxWeight = 9.0
+timeToReelIn = 13.0
+minTimeStaysInSpot = 0.5
+maxTimeStaysInSpot = 1.5
+maxMoveToTargetPosTime = 3.0
+boatTippingAnglePerSec = 7.4
+minDirectionAngleChange = 40.0
+maxDirectionAngleChange = 120.0
+preHookQTETimeLength = 1.2
+timeToHitQTE = 1.1
+meshPackedScene = ExtResource( 7 )
+
+[node name="COMMON_4" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Stiff-Lipped Trout"
+speciesDescription = "A common cause of missing toes"
+id = 3
+logbookCameraX = 1.0
+minPrice = 10
+maxPrice = 15
+minWeight = 7.0
+maxWeight = 9.0
+timeToReelIn = 13.0
+minMoveToTargetPosTime = 1.2
+maxMoveToTargetPosTime = 1.8
+boatTippingAnglePerSec = 7.4
+minDirectionAngleChange = 25.0
+maxDirectionAngleChange = 85.0
+preHookQTETimeLength = 1.2
+timeToHitQTE = 1.1
+meshPackedScene = ExtResource( 13 )
+
+[node name="COMMON_5" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Rustic Tanner"
+speciesDescription = "Commonly found living in the hulls of boats"
+id = 4
+logbookCameraX = 1.2
+minPrice = 10
+maxPrice = 15
+minWeight = 7.0
+maxWeight = 9.0
+timeToReelIn = 13.0
+maxMoveToTargetPosTime = 1.8
+boatTippingAnglePerSec = 7.4
+preHookQTETimeLength = 1.4
+timeToHitQTE = 1.1
+meshPackedScene = ExtResource( 9 )
+
+[node name="UNCOMMON_1" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "One-Eyed Wonder"
+speciesDescription = "An uncommon delicacy"
+rarity = 1
+id = 5
+logbookCameraX = 1.4
+minPrice = 20
+maxPrice = 30
+minWeight = 10.0
+maxWeight = 20.0
+timeToReelIn = 17.5
+minTimeStaysInSpot = 0.8
+maxTimeStaysInSpot = 1.2
+minMoveToTargetPosTime = 0.75
+maxMoveToTargetPosTime = 1.5
+maxDirectionAngleChange = 120.0
+justHookedTotalTime = 1.75
+preHookQTETimeLength = 1.05
+timeToHitQTE = 0.75
+meshPackedScene = ExtResource( 14 )
+
+[node name="UNCOMMON_2" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Tropical Hellfish"
+speciesDescription = "This uncommon beauty actually boils the water around it"
+rarity = 1
+id = 6
+logbookCameraX = 1.4
+minPrice = 25
+maxPrice = 35
+minWeight = 15.0
+maxWeight = 25.0
+timeToReelIn = 17.5
+minTimeStaysInSpot = 0.0
+maxTimeStaysInSpot = 0.0
+minMoveToTargetPosTime = 0.75
+maxMoveToTargetPosTime = 1.5
+minDirectionAngleChange = 20.0
+maxDirectionAngleChange = 60.0
+justHookedTotalTime = 1.75
+preHookQTETimeLength = 1.05
+timeToHitQTE = 0.75
+meshPackedScene = ExtResource( 10 )
+
+[node name="UNCOMMON_3" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Spiked Spine-Foot"
+speciesDescription = "An uncommon fish with a strange name, as it has no feet"
+rarity = 1
+id = 7
+logbookCameraX = 1.4
+minPrice = 40
+maxPrice = 50
+minWeight = 15.0
+maxWeight = 25.0
+timeToReelIn = 17.5
+minTimeStaysInSpot = 0.8
+maxTimeStaysInSpot = 1.2
+minMoveToTargetPosTime = 0.75
+maxMoveToTargetPosTime = 1.25
+minDirectionAngleChange = 40.0
+maxDirectionAngleChange = 100.0
+justHookedTotalTime = 1.75
+preHookQTETimeLength = 1.05
+timeToHitQTE = 0.75
+meshPackedScene = ExtResource( 8 )
+
+[node name="UNCOMMON_4" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Striped Deity"
+speciesDescription = "An uncommon fish that must be eaten alive due to it having godmode"
+rarity = 1
+id = 8
+logbookCameraX = 1.5
+minPrice = 40
+maxPrice = 50
+minWeight = 15.0
+maxWeight = 25.0
+timeToReelIn = 17.5
+minTimeStaysInSpot = 0.6
+maxTimeStaysInSpot = 1.2
+minMoveToTargetPosTime = 0.75
+maxMoveToTargetPosTime = 1.4
+minDirectionAngleChange = 50.0
+maxDirectionAngleChange = 130.0
+justHookedTotalTime = 1.75
+preHookQTETimeLength = 1.05
+timeToHitQTE = 0.75
+meshPackedScene = ExtResource( 11 )
+
+[node name="RARE_1" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Blinky"
+speciesDescription = "A rarity that is powered by radiation"
+rarity = 2
+id = 9
+logbookCameraX = 1.4
+minPrice = 75
+maxPrice = 100
+minWeight = 25.0
+maxWeight = 50.0
+timeToReelIn = 25.0
+minTimeStaysInSpot = 0.5
+maxTimeStaysInSpot = 0.6
+minMoveToTargetPosTime = 0.4
+maxMoveToTargetPosTime = 0.6
+boatTippingAnglePerSec = 8.25
+minDirectionAngleChange = 25.0
+maxDirectionAngleChange = 110.0
+justHookedTotalTime = 1.5
+preHookQTETimeLength = 0.8
+timeToHitQTE = 0.5
+meshPackedScene = ExtResource( 6 )
+
+[node name="RARE_2" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Purple Dongle-Fin"
+speciesDescription = "A rare beast that attacks with its mighty dongle"
+rarity = 2
+id = 10
+logbookCameraX = 2.5
+minPrice = 90
+maxPrice = 140
+minWeight = 40.0
+maxWeight = 60.0
+timeToReelIn = 25.0
+minTimeStaysInSpot = 0.0
+maxTimeStaysInSpot = 0.0
+minMoveToTargetPosTime = 0.8
+maxMoveToTargetPosTime = 1.0
+boatTippingAnglePerSec = 8.25
+minDirectionAngleChange = 90.0
+maxDirectionAngleChange = 140.0
+justHookedTotalTime = 1.5
+preHookQTETimeLength = 0.8
+timeToHitQTE = 0.5
+meshPackedScene = ExtResource( 5 )
+
+[node name="RARE_3" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Ghost-Finned Killer"
+speciesDescription = "Kills its prey and then consumes their soul"
+rarity = 2
+id = 11
+logbookCameraX = 3.2
+minPrice = 90
+maxPrice = 140
+minWeight = 40.0
+maxWeight = 60.0
+timeToReelIn = 25.0
+minTimeStaysInSpot = 0.5
+maxTimeStaysInSpot = 0.6
+minMoveToTargetPosTime = 0.4
+maxMoveToTargetPosTime = 0.6
+boatTippingAnglePerSec = 8.25
+minDirectionAngleChange = 46.0
+maxDirectionAngleChange = 99.0
+justHookedTotalTime = 1.5
+preHookQTETimeLength = 0.8
+timeToHitQTE = 0.5
+meshPackedScene = ExtResource( 12 )
+
+[node name="MYTHIC_1" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Mind Melter"
+speciesDescription = "The rarest mythical fish of them all"
+rarity = 3
+id = 12
+logbookCameraX = 4.2
+minPrice = 200
+maxPrice = 300
+minWeight = 150.0
+maxWeight = 200.0
+timeToReelIn = 40.0
+minTimeStaysInSpot = 0.4
+maxTimeStaysInSpot = 0.4
+minMoveToTargetPosTime = 0.2
+maxMoveToTargetPosTime = 0.4
+boatTippingAnglePerSec = 8.25
+minDirectionAngleChange = 50.0
+maxDirectionAngleChange = 150.0
+justHookedTotalTime = 1.3
+preHookQTETimeLength = 0.7
+timeToHitQTE = 0.5
+meshPackedScene = ExtResource( 4 )
+
+[node name="MYTHIC_2" type="Spatial" parent="."]
+script = ExtResource( 2 )
+speciesName = "Shoppler Doppler"
+speciesDescription = "This mythical fish looks familiar...."
+rarity = 3
+id = 13
+logbookCameraX = 3.2
+minPrice = 200
+maxPrice = 300
+minWeight = 150.0
+maxWeight = 200.0
+timeToReelIn = 40.0
+minTimeStaysInSpot = 0.6
+maxTimeStaysInSpot = 0.6
+minMoveToTargetPosTime = 0.4
+maxMoveToTargetPosTime = 0.4
+boatTippingAnglePerSec = 8.25
+minDirectionAngleChange = 60.0
+maxDirectionAngleChange = 120.0
+justHookedTotalTime = 1.3
+preHookQTETimeLength = 0.7
+timeToHitQTE = 0.5
+meshPackedScene = ExtResource( 15 )

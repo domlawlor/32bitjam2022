@@ -1,0 +1,223 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Font/Font.tres" type="Theme" id=1]
+[ext_resource path="res://Art/ControllerIcons/xbox_a.png" type="Texture" id=2]
+[ext_resource path="res://TooltipUI.gd" type="Script" id=3]
+[ext_resource path="res://Art/ControllerIcons/xbox_y.png" type="Texture" id=4]
+[ext_resource path="res://Art/ControllerIcons/Cross.png" type="Texture" id=5]
+[ext_resource path="res://Art/ControllerIcons/Triangle.png" type="Texture" id=6]
+
+[node name="TooltipUI" type="Control"]
+margin_right = 320.0
+margin_bottom = 240.0
+script = ExtResource( 3 )
+
+[node name="EnterShop" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="GP" type="Control" parent="EnterShop"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextGP" type="Label" parent="EnterShop/GP"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 201.0
+margin_right = 300.0
+margin_bottom = 216.0
+theme = ExtResource( 1 )
+text = "Press      to enter the shop"
+align = 1
+
+[node name="IconGP" type="Sprite" parent="EnterShop/GP"]
+position = Vector2( 116.25, 226.75 )
+scale = Vector2( 0.194, 0.194 )
+texture = ExtResource( 2 )
+
+[node name="GP_PS" type="Control" parent="EnterShop"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextGP" type="Label" parent="EnterShop/GP_PS"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 201.0
+margin_right = 300.0
+margin_bottom = 216.0
+theme = ExtResource( 1 )
+text = "Press      to enter the shop"
+align = 1
+
+[node name="IconGP" type="Sprite" parent="EnterShop/GP_PS"]
+position = Vector2( 116.25, 226.75 )
+scale = Vector2( 0.194, 0.194 )
+texture = ExtResource( 5 )
+
+[node name="KB" type="Control" parent="EnterShop"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextKB" type="Label" parent="EnterShop/KB"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 201.0
+margin_right = 300.0
+margin_bottom = 216.0
+theme = ExtResource( 1 )
+text = "Press SPACEBAR to enter the shop"
+align = 1
+
+[node name="Fishing" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="GP" type="Control" parent="Fishing"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="IconGP" type="Sprite" parent="Fishing/GP"]
+position = Vector2( 122.25, 227.75 )
+scale = Vector2( 0.194444, 0.194444 )
+texture = ExtResource( 4 )
+
+[node name="TextGP" type="Label" parent="Fishing/GP"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 201.0
+margin_right = 300.0
+margin_bottom = 216.0
+theme = ExtResource( 1 )
+text = "Press      to start fishing"
+align = 1
+
+[node name="GP_PS" type="Control" parent="Fishing"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="IconGP" type="Sprite" parent="Fishing/GP_PS"]
+position = Vector2( 122.25, 227.75 )
+scale = Vector2( 0.194444, 0.194444 )
+texture = ExtResource( 6 )
+
+[node name="TextGP" type="Label" parent="Fishing/GP_PS"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 201.0
+margin_right = 300.0
+margin_bottom = 216.0
+theme = ExtResource( 1 )
+text = "Press      to start fishing"
+align = 1
+
+[node name="KB" type="Control" parent="Fishing"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextKB" type="Label" parent="Fishing/KB"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 201.0
+margin_right = 300.0
+margin_bottom = 216.0
+theme = ExtResource( 1 )
+text = "Press ENTER to start fishing"
+align = 1
+
+[node name="HowToFishOneOff" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="GP" type="Control" parent="HowToFishOneOff"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextGP" type="Label" parent="HowToFishOneOff/GP"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 201.0
+margin_right = 300.0
+margin_bottom = 216.0
+theme = ExtResource( 1 )
+text = "Press      to start fishing"
+align = 1
+
+[node name="IconGP" type="Sprite" parent="HowToFishOneOff/GP"]
+position = Vector2( 122.25, 226.75 )
+scale = Vector2( 0.194, 0.194 )
+texture = ExtResource( 2 )
+
+[node name="GP_PS" type="Control" parent="HowToFishOneOff"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextGP" type="Label" parent="HowToFishOneOff/GP_PS"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 201.0
+margin_right = 300.0
+margin_bottom = 216.0
+theme = ExtResource( 1 )
+text = "Press      to start fishing"
+align = 1
+
+[node name="IconGP" type="Sprite" parent="HowToFishOneOff/GP_PS"]
+position = Vector2( 122.25, 226.75 )
+scale = Vector2( 0.194, 0.194 )
+texture = ExtResource( 5 )
+
+[node name="KB" type="Control" parent="HowToFishOneOff"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextKB" type="Label" parent="HowToFishOneOff/KB"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 201.0
+margin_right = 300.0
+margin_bottom = 216.0
+theme = ExtResource( 1 )
+text = "Press SPACEBAR to start fishing"
+align = 1
+
+[node name="Timer" type="Timer" parent="HowToFishOneOff"]
+wait_time = 10.0
+one_shot = true

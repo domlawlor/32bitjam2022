@@ -1,0 +1,131 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://BlockingUI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://BlockingUI_Logbook.gd" type="Script" id=2]
+[ext_resource path="res://Font/Font.tres" type="Theme" id=4]
+
+[sub_resource type="Environment" id=2]
+
+[sub_resource type="World" id=3]
+environment = SubResource( 2 )
+
+[sub_resource type="ViewportTexture" id=1]
+viewport_path = NodePath("FishModelViewport")
+
+[node name="BlockingUI_Logbook" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Title" type="Label" parent="." index="2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -160.0
+margin_top = -225.0
+margin_right = 160.0
+margin_bottom = -210.0
+theme = ExtResource( 4 )
+text = "<           logbook           >"
+align = 1
+uppercase = true
+
+[node name="FishModelViewport" type="Viewport" parent="." index="3"]
+size = Vector2( 320, 240 )
+own_world = true
+world = SubResource( 3 )
+transparent_bg = true
+msaa = 2
+
+[node name="Model" type="Spatial" parent="FishModelViewport" index="0"]
+
+[node name="Camera" type="Camera" parent="FishModelViewport/Model" index="0"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.6, 0, 0 )
+
+[node name="ViewportSprite" type="Sprite" parent="." index="4"]
+position = Vector2( 159, 119 )
+texture = SubResource( 1 )
+flip_v = true
+
+[node name="FishName" type="Label" parent="." index="5"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -160.0
+margin_top = -54.0
+margin_right = 160.0
+margin_bottom = -39.0
+theme = ExtResource( 4 )
+text = "Triangle fish"
+align = 1
+uppercase = true
+
+[node name="Description" type="Label" parent="." index="6"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -140.0
+margin_top = -36.0
+margin_right = 140.0
+margin_bottom = -3.0
+theme = ExtResource( 4 )
+text = "Contrary to popular belief, it still poops circles...."
+align = 1
+autowrap = true
+
+[node name="CaughtText" type="Label" parent="." index="7"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = -203.0
+margin_right = 129.0
+margin_bottom = -188.0
+theme = ExtResource( 4 )
+text = "Caught:"
+align = 2
+autowrap = true
+
+[node name="CaughtValue" type="Label" parent="." index="8"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 60.0
+margin_top = -203.0
+margin_right = 153.0
+margin_bottom = -188.0
+theme = ExtResource( 4 )
+text = "10"
+align = 2
+autowrap = true
+
+[node name="WeightText" type="Label" parent="." index="9"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = -186.0
+margin_right = 96.0
+margin_bottom = -171.0
+theme = ExtResource( 4 )
+text = "PB:"
+align = 2
+autowrap = true
+
+[node name="WeightValue" type="Label" parent="." index="10"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 60.0
+margin_top = -186.0
+margin_right = 153.0
+margin_bottom = -171.0
+theme = ExtResource( 4 )
+text = "350.2kg"
+align = 2
+autowrap = true

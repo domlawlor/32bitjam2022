@@ -1,0 +1,386 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://GameplayScene.gd" type="Script" id=1]
+[ext_resource path="res://Art/Water/water.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Boat.tscn" type="PackedScene" id=3]
+[ext_resource path="res://WorldCollectables/QuestCollectable1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameplayUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://WorldCollectables/QuestCollectable2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Art/Icons/compass_ui.svg" type="Texture" id=7]
+[ext_resource path="res://CompassUI.gd" type="Script" id=8]
+[ext_resource path="res://AlertUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Art/WorldEnvironment/Map_Final.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Art/WorldEnvironment/Blocker_Rocks_02.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Art/WorldEnvironment/Blocker_Rocks_01.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Art/WorldEnvironment/Blocker_AllSeeingEye.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Art/WorldEnvironment/Collision_main.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Art/WorldEnvironment/Collision_Allseeingeye.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Art/WorldEnvironment/Collision_Rockwall_01.tscn" type="PackedScene" id=16]
+[ext_resource path="res://TooltipUI.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Art/WorldEnvironment/Collision_Rockwall_02.tscn" type="PackedScene" id=18]
+[ext_resource path="res://EnvironmentActions.gd" type="Script" id=20]
+
+[sub_resource type="CylinderShape" id=1]
+height = 3.25762
+radius = 6.41874
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.289387, 1, 12.4109 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 0.289387, 1, 10.3144 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 0.289387, 1, 18.6391 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 0.289387, 1, 12.0825 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.289387, 1, 8.52475 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 0.289387, 1, 15.1009 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 0.289387, 1, 15.1009 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 0.289387, 1, 16.4498 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 30.5458, 1, 39.6932 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 29.5149, 1, 37.5612 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 20.6421, 1, 61.9563 )
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 0.289387, 1, 16.4498 )
+
+[sub_resource type="BoxShape" id=17]
+extents = Vector3( 0.289387, 1, 7.08508 )
+
+[sub_resource type="BoxShape" id=18]
+extents = Vector3( 15.4436, 1, 19.4245 )
+
+[sub_resource type="BoxShape" id=19]
+extents = Vector3( 16.8249, 1, 18.1601 )
+
+[sub_resource type="BoxShape" id=20]
+extents = Vector3( 38.4016, 1, 18.1601 )
+
+[sub_resource type="BoxShape" id=21]
+extents = Vector3( 50.7311, 1, 13.718 )
+
+[sub_resource type="BoxShape" id=22]
+extents = Vector3( 18.5934, 1, 25.6102 )
+
+[sub_resource type="BoxShape" id=23]
+extents = Vector3( 27.2873, 1, 33.768 )
+
+[sub_resource type="CylinderShape" id=25]
+height = 3.25762
+radius = 20.8251
+
+[sub_resource type="ProceduralSky" id=24]
+sky_top_color = Color( 0, 0, 0, 1 )
+sky_horizon_color = Color( 0.427451, 0.517647, 0.486275, 1 )
+ground_bottom_color = Color( 0.427451, 0.517647, 0.486275, 1 )
+ground_horizon_color = Color( 0.427451, 0.517647, 0.486275, 1 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 24 )
+background_camera_feed_id = 2
+ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_sky_contribution = 0.0
+fog_color = Color( 0.282353, 0.419608, 0.372549, 1 )
+fog_sun_color = Color( 0.235294, 0.470588, 0.270588, 1 )
+fog_depth_begin = 0.0
+fog_depth_end = 30.0
+fog_depth_curve = 4.75682
+fog_height_enabled = true
+fog_height_min = 400.0
+fog_height_max = -1750.0
+glow_enabled = true
+
+[node name="GameplayScene" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.586142, 0.298888, -0.753063, 0.0405374, 0.917485, 0.395699, 0.809193, -0.262463, 0.525661, -21.3766, 6.6635, 7.64447 )
+current = true
+
+[node name="WorldEnvironment" type="Spatial" parent="."]
+
+[node name="Map_Final" parent="WorldEnvironment" instance=ExtResource( 10 )]
+
+[node name="Blocker_Rocks_01" parent="WorldEnvironment" instance=ExtResource( 12 )]
+
+[node name="Blocker_Rocks_02" parent="WorldEnvironment" instance=ExtResource( 11 )]
+
+[node name="Blocker_AllSeeingEye" parent="WorldEnvironment" instance=ExtResource( 13 )]
+
+[node name="Collision_main" parent="WorldEnvironment" instance=ExtResource( 14 )]
+
+[node name="Collision_Allseeingeye" parent="WorldEnvironment" instance=ExtResource( 15 )]
+
+[node name="Collision_Rockwall_01" parent="WorldEnvironment" instance=ExtResource( 16 )]
+
+[node name="Collision_Rockwall_02" parent="WorldEnvironment" instance=ExtResource( 18 )]
+
+[node name="Rocks1BreakTimer" type="Timer" parent="WorldEnvironment"]
+wait_time = 0.6
+one_shot = true
+
+[node name="Rocks2BreakTimer" type="Timer" parent="WorldEnvironment"]
+wait_time = 0.6
+one_shot = true
+
+[node name="Water" parent="." instance=ExtResource( 2 )]
+
+[node name="Boat" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.753712, 0, 0.657204, 0, 1, 0, -0.657204, 0, -0.753712, -16.0191, 0.201907, 5.95182 )
+
+[node name="WorldCollectableSpawns" type="Spatial" parent="."]
+
+[node name="TreasureSpawns" type="Spatial" parent="WorldCollectableSpawns"]
+
+[node name="TreasureSpawn1" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.24086, 0, -11.2171 )
+
+[node name="TreasureSpawn2" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39.4736, 0, 25.3142 )
+
+[node name="TreasureSpawn3" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70.7463, 0, 21.4179 )
+
+[node name="TreasureSpawn4" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 79.4633, 0, -2.93659 )
+
+[node name="TreasureSpawn5" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5268, 0, -42.3337 )
+
+[node name="TreasureSpawn6" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.54, 0, -45.3226 )
+
+[node name="TreasureSpawn7" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2266, 0, -32.0844 )
+
+[node name="TreasureSpawn8" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30824, 0, -34.7623 )
+
+[node name="TreasureSpawn9" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5655, 0, -71.0558 )
+
+[node name="TreasureSpawn10" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.6992, 0, -56.3 )
+
+[node name="TreasureSpawn11" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.0312, 0, -77.1073 )
+
+[node name="TreasureSpawn12" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.3623, 0, -59.5263 )
+
+[node name="TreasureSpawn14" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.4684, 0, -13.1677 )
+
+[node name="TreasureSpawn15" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -57.2297, 0, -34.8828 )
+
+[node name="TreasureSpawn16" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -76.3672, 0, -43.4719 )
+
+[node name="TreasureSpawn17" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -78.6708, 0, 11.2325 )
+
+[node name="TreasureSpawn18" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.3473, 0, 45.8103 )
+
+[node name="TreasureSpawn19" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70.3851, 0, 48.3481 )
+
+[node name="TreasureSpawn20" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.6992, 0, 78.1823 )
+
+[node name="TreasureSpawn21" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -71.3193, 0, 80.2463 )
+
+[node name="TreasureSpawn22" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55.1454, 0, 67.5552 )
+
+[node name="TreasureSpawn23" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.46696, 0, 57.9836 )
+
+[node name="TreasureSpawn24" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.53892, 0, 66.9725 )
+
+[node name="TreasureSpawn25" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.8789, 0, 68.3558 )
+
+[node name="TreasureSpawn26" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.1705, 0, 55.1758 )
+
+[node name="TreasureSpawn27" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39.3122, 0, 40.4643 )
+
+[node name="TreasureSpawn28" type="Position3D" parent="WorldCollectableSpawns/TreasureSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.8216, 0, -3.55167 )
+
+[node name="ChestInstanceParent" type="Spatial" parent="WorldCollectableSpawns"]
+
+[node name="QuestCollectable1" parent="WorldCollectableSpawns" instance=ExtResource( 4 )]
+transform = Transform( -0.148621, -0.988875, 0.00621339, 0, -0.00628317, -0.99998, 0.988894, -0.148618, 0.000933808, 42.3132, 0.920641, -66.1637 )
+
+[node name="QuestCollectable2" parent="WorldCollectableSpawns" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, -0.0248858, -0.99969, 0, 0.99969, -0.0248858, -67.5697, 1.07786, -40.3012 )
+
+[node name="AreaTriggers" type="Spatial" parent="."]
+
+[node name="ShopEntranceTrigger" type="Area" parent="AreaTriggers"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7276, 0, 2.25277 )
+
+[node name="CollisionShape" type="CollisionShape" parent="AreaTriggers/ShopEntranceTrigger"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08126, 0, 0.889315 )
+shape = SubResource( 1 )
+
+[node name="CreepyTrigger" type="Area" parent="AreaTriggers"]
+
+[node name="CollisionShape" type="CollisionShape" parent="AreaTriggers/CreepyTrigger"]
+transform = Transform( 0.870545, 0, 0.492089, 0, 1, 0, -0.492089, 0, 0.870545, 16.8454, 0, 56.9333 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="AreaTriggers/CreepyTrigger"]
+transform = Transform( 0.029893, 0, -0.999553, 0, 1, 0, 0.999553, 0, 0.029893, 66.0676, 0, -27.2983 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="AreaTriggers/CreepyTrigger"]
+transform = Transform( -0.0278693, 0, -0.999612, 0, 1, 0, 0.999612, 0, -0.0278693, -32.4131, 0, -48.7541 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape5" type="CollisionShape" parent="AreaTriggers/CreepyTrigger"]
+transform = Transform( -0.981614, 0, 0.190877, 0, 1, 0, -0.190877, 0, -0.981614, -50.4992, 0, 2.22892 )
+shape = SubResource( 12 )
+
+[node name="ShopTrigger" type="Area" parent="AreaTriggers"]
+
+[node name="CollisionShape" type="CollisionShape" parent="AreaTriggers/ShopTrigger"]
+transform = Transform( 0.782565, 0, 0.622569, 0, 1, 0, -0.622569, 0, 0.782565, 24.0736, 0, 54.5287 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="AreaTriggers/ShopTrigger"]
+transform = Transform( 0.0393993, 0, -0.999224, 0, 1, 0, 0.999224, 0, 0.0393993, 71.1524, 0, -13.1212 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="AreaTriggers/ShopTrigger"]
+transform = Transform( 0.274429, 0, -0.961608, 0, 1, 0, 0.961608, 0, 0.274429, -23.372, 0, -34.5212 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="AreaTriggers/ShopTrigger"]
+transform = Transform( 0.972695, 0, -0.232088, 0, 1, 0, 0.232088, 0, 0.972695, -38.8368, 0, 3.52466 )
+shape = SubResource( 15 )
+
+[node name="HeavyFog" type="Area" parent="AreaTriggers"]
+
+[node name="CollisionShape" type="CollisionShape" parent="AreaTriggers/HeavyFog"]
+transform = Transform( 0.627474, 0, -0.778638, 0, 1, 0, 0.778638, 0, 0.627474, -62.7994, -0.635421, 69.7701 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="AreaTriggers/HeavyFog"]
+transform = Transform( 0.0989203, 0, -0.995095, 0, 1, 0, 0.995095, 0, 0.0989203, 84.0848, -0.635421, 0.948967 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="AreaTriggers/HeavyFog"]
+transform = Transform( 0.264866, 0, -0.964285, 0, 1, 0, 0.964285, 0, 0.264866, 11.0586, -0.635421, -68.8746 )
+shape = SubResource( 6 )
+
+[node name="BreakRocksTrigger1" type="Area" parent="AreaTriggers"]
+
+[node name="CollisionShape" type="CollisionShape" parent="AreaTriggers/BreakRocksTrigger1"]
+transform = Transform( 0.999025, 0, -0.044143, 0, 1, 0, 0.044143, 0, 0.999025, -44.6234, 0, 3.52466 )
+shape = SubResource( 16 )
+
+[node name="BreakRocksTrigger2" type="Area" parent="AreaTriggers"]
+
+[node name="CollisionShape" type="CollisionShape" parent="AreaTriggers/BreakRocksTrigger2"]
+transform = Transform( 0.776927, 0, 0.629591, 0, 1, 0, -0.629591, 0, 0.776927, 23.8221, 0, 53.3577 )
+shape = SubResource( 17 )
+
+[node name="QuestMythicArea" type="Area" parent="AreaTriggers"]
+
+[node name="CollisionShape" type="CollisionShape" parent="AreaTriggers/QuestMythicArea"]
+transform = Transform( 0.558049, 0, -0.829808, 0, 1, 0, 0.829808, 0, 0.558049, 59.6996, 0.11618, -45.9636 )
+shape = SubResource( 18 )
+
+[node name="FishingZoneRareArea" type="Area" parent="AreaTriggers"]
+
+[node name="CollisionShape" type="CollisionShape" parent="AreaTriggers/FishingZoneRareArea"]
+transform = Transform( 0.558049, 0, -0.829808, 0, 1, 0, 0.829808, 0, 0.558049, -1.21862, 0.11618, 67.2225 )
+shape = SubResource( 19 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="AreaTriggers/FishingZoneRareArea"]
+transform = Transform( -0.0499829, 0, -0.998751, 0, 1, 0, 0.998751, 0, -0.0499829, -71.6363, 0.11618, -15.8462 )
+shape = SubResource( 20 )
+
+[node name="FishingZoneUncommonArea" type="Area" parent="AreaTriggers"]
+
+[node name="CollisionShape2" type="CollisionShape" parent="AreaTriggers/FishingZoneUncommonArea"]
+transform = Transform( -0.993415, 0, -0.114573, 0, 1, 0, 0.114573, 0, -0.993415, 1.1818, 0.11618, -66.4124 )
+shape = SubResource( 21 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="AreaTriggers/FishingZoneUncommonArea"]
+transform = Transform( -0.993415, 0, -0.114573, 0, 1, 0, 0.114573, 0, -0.993415, 66.4425, 0.11618, 0.184114 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="AreaTriggers/FishingZoneUncommonArea"]
+transform = Transform( -0.783965, 0, -0.620806, 0, 1, 0, 0.620806, 0, -0.783965, -61.5686, 0.11618, 65.7093 )
+shape = SubResource( 23 )
+
+[node name="HowToFishTrigger" type="Area" parent="AreaTriggers"]
+
+[node name="CollisionShape" type="CollisionShape" parent="AreaTriggers/HowToFishTrigger"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6767, 0, 5.73951 )
+shape = SubResource( 25 )
+
+[node name="GameplayLayer" type="CanvasLayer" parent="."]
+
+[node name="GameplayUI" parent="GameplayLayer" instance=ExtResource( 5 )]
+
+[node name="AlertUI" parent="GameplayLayer" instance=ExtResource( 9 )]
+
+[node name="CompassUI" type="Control" parent="GameplayLayer"]
+margin_right = 320.0
+margin_bottom = 240.0
+script = ExtResource( 8 )
+
+[node name="CompassArrow" type="Sprite" parent="GameplayLayer/CompassUI"]
+position = Vector2( 160, 20 )
+texture = ExtResource( 7 )
+
+[node name="TooltipUI" parent="GameplayLayer" instance=ExtResource( 17 )]
+pause_mode = 2
+
+[node name="WorldEnvironmentEffects" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+script = ExtResource( 20 )
+
+[connection signal="timeout" from="WorldEnvironment/Rocks1BreakTimer" to="." method="_on_Rocks1BreakTimer_timeout"]
+[connection signal="timeout" from="WorldEnvironment/Rocks2BreakTimer" to="." method="_on_Rocks2BreakTimer_timeout"]
+[connection signal="body_entered" from="AreaTriggers/ShopEntranceTrigger" to="." method="_on_ShopEntranceTrigger_body_entered"]
+[connection signal="body_exited" from="AreaTriggers/ShopEntranceTrigger" to="." method="_on_ShopEntranceTrigger_body_exited"]
+[connection signal="body_entered" from="AreaTriggers/CreepyTrigger" to="." method="_on_CreepyTrigger_body_entered"]
+[connection signal="body_entered" from="AreaTriggers/ShopTrigger" to="." method="_on_ShopTrigger_body_entered"]
+[connection signal="body_entered" from="AreaTriggers/HeavyFog" to="WorldEnvironmentEffects" method="_on_HeavyFog_body_entered"]
+[connection signal="body_exited" from="AreaTriggers/HeavyFog" to="WorldEnvironmentEffects" method="_on_HeavyFog_body_exited"]
+[connection signal="body_entered" from="AreaTriggers/BreakRocksTrigger1" to="." method="_on_BreakRocksTrigger1_body_entered"]
+[connection signal="body_entered" from="AreaTriggers/BreakRocksTrigger2" to="." method="_on_BreakRocksTrigger2_body_entered"]
+[connection signal="body_entered" from="AreaTriggers/QuestMythicArea" to="." method="_on_QuestMythicArea_body_entered"]
+[connection signal="body_exited" from="AreaTriggers/QuestMythicArea" to="." method="_on_FishingZoneArea_body_exited"]
+[connection signal="body_entered" from="AreaTriggers/FishingZoneRareArea" to="." method="_on_FishingZoneRareArea_body_entered"]
+[connection signal="body_exited" from="AreaTriggers/FishingZoneRareArea" to="." method="_on_FishingZoneArea_body_exited"]
+[connection signal="body_entered" from="AreaTriggers/FishingZoneUncommonArea" to="." method="_on_FishingZoneUncommonArea_body_entered"]
+[connection signal="body_exited" from="AreaTriggers/FishingZoneUncommonArea" to="." method="_on_FishingZoneArea_body_exited"]
+[connection signal="body_exited" from="AreaTriggers/HowToFishTrigger" to="GameplayLayer/TooltipUI" method="_on_HowToFishTrigger_body_exited"]

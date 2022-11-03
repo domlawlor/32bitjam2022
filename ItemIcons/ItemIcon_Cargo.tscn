@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ItemIcons/ItemIcon_Base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Art/Icons/ExtraCargo - Copy.png" type="Texture" id=2]
+
+[node name="ItemIcon_Cargo" instance=ExtResource( 1 )]
+suppliesType = false
+unlockProgression = 1
+description = "Lets you carry more fish"
+price = 100
+itemEnum = 2
+
+[node name="IconGFX" parent="." index="3"]
+texture = ExtResource( 2 )

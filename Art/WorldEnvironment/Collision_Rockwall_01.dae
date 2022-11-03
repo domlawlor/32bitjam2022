@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author/>
+      <authoring_tool>FBX COLLADA exporter</authoring_tool>
+      <comments/>
+    </contributor>
+    <created>2022-10-29T12:58:07Z</created>
+    <keywords/>
+    <modified>2022-10-29T12:58:07Z</modified>
+    <revision/>
+    <subject/>
+    <title/>
+    <unit meter="0.010000" name="centimeter"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_materials>
+    <material id="lambert31" name="lambert31">
+      <instance_effect url="#lambert31-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="lambert31-fx" name="lambert31">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.088312  0.088312 0.088312 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">1.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Collision_RockWall_01-lib" name="Collision_RockWall_01Mesh">
+      <mesh>
+        <source id="Collision_RockWall_01-POSITION">
+          <float_array id="Collision_RockWall_01-POSITION-array" count="48">
+-4959.559082 -86.141640 219.644043
+-4950.687500 -102.156586 16.087158
+-4963.988281 -120.537872 -198.211914
+-5063.913574 -104.374191 915.714600
+-5020.604980 -94.866791 718.365967
+-4983.803223 -84.398888 464.598145
+-4976.302246 -122.542213 -371.134277
+-4969.746094 -117.939774 -637.089600
+-4960.364746 580.632690 233.399414
+-4951.519531 586.535706 30.294189
+-4964.847656 590.506592 -183.543457
+-5064.718262 562.467834 929.470947
+-5021.405762 568.030457 732.041016
+-4984.599121 574.468140 478.189941
+-4977.167480 594.356567 -356.345215
+-4970.608398 596.386047 -622.353516
+</float_array>
+          <technique_common>
+            <accessor source="#Collision_RockWall_01-POSITION-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Collision_RockWall_01-Normal0">
+          <float_array id="Collision_RockWall_01-Normal0-array" count="126">
+0.999053 0.000310 0.043517
+0.999053 0.000310 0.043517
+0.999053 0.000310 0.043517
+0.999053 0.000310 0.043517
+0.999053 0.000310 0.043517
+0.999053 0.000310 0.043517
+0.998063 0.002488 -0.062160
+0.998063 0.002488 -0.062160
+0.998063 0.002488 -0.062160
+0.998063 0.002488 -0.062160
+0.998063 0.002488 -0.062160
+0.998063 0.002488 -0.062160
+0.976785 -0.003240 0.214199
+0.976785 -0.003240 0.214199
+0.976785 -0.003240 0.214199
+0.976785 -0.003240 0.214199
+0.976785 -0.003240 0.214199
+0.976785 -0.003240 0.214199
+0.989656 -0.001764 0.143449
+0.989656 -0.001764 0.143449
+0.989656 -0.001764 0.143449
+0.989656 -0.001764 0.143449
+0.989656 -0.001764 0.143449
+0.989656 -0.001764 0.143449
+0.995137 -0.000830 0.098498
+0.995137 -0.000830 0.098498
+0.995137 -0.000830 0.098498
+0.995137 -0.000830 0.098498
+0.995137 -0.000830 0.098498
+0.995137 -0.000830 0.098498
+0.997469 0.002670 -0.071058
+0.997469 0.002670 -0.071058
+0.997469 0.002670 -0.071058
+0.997469 0.002670 -0.071058
+0.997469 0.002670 -0.071058
+0.997469 0.002670 -0.071058
+0.999696 0.000698 0.024656
+0.999696 0.000698 0.024656
+0.999696 0.000698 0.024656
+0.999696 0.000698 0.024656
+0.999696 0.000698 0.024656
+0.999696 0.000698 0.024656
+</float_array>
+          <technique_common>
+            <accessor source="#Collision_RockWall_01-Normal0-array" count="42" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Collision_RockWall_01-UV0">
+          <float_array id="Collision_RockWall_01-UV0-array" count="56">
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Collision_RockWall_01-UV0-array" count="28" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Collision_RockWall_01-VERTEX">
+          <input semantic="POSITION" source="#Collision_RockWall_01-POSITION"/>
+        </vertices>
+        <triangles count="14" material="lambert31">
+          <input semantic="VERTEX" offset="0" source="#Collision_RockWall_01-VERTEX"/>
+          <input semantic="NORMAL" offset="1" source="#Collision_RockWall_01-Normal0"/>
+          <input semantic="TEXCOORD" offset="2" set="0" source="#Collision_RockWall_01-UV0"/>
+          <p> 1 0 1 9 1 2 0 2 0 8 3 3 0 4 0 9 5 2 2 6 5 10 7 6 1 8 4 9 9 7 1 10 4 10 11 6 4 12 9 11 13 11 3 14 8 11 15 11 4 16 9 12 17 10 5 18 13 12 19 15 4 20 12 12 21 15 5 22 13 13 23 14 0 24 17 8 25 18 5 26 16 13 27 19 5 28 16 8 29 18 6 30 21 14 31 22 2 32 20 10 33 23 2 34 20 14 35 22 7 36 25 15 37 26 6 38 24 14 39 27 6 40 24 15 41 26</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Collision_Rockwall_01" name="Collision_Rockwall_01">
+      <node name="Collision" id="Collision" sid="Collision">
+        <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+        <extra>
+          <technique profile="FCOLLADA">
+            <visibility>1.000000</visibility>
+          </technique>
+        </extra>
+        <node name="Collision_RockWall_01" id="Collision_RockWall_01" sid="Collision_RockWall_01">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+          <instance_geometry url="#Collision_RockWall_01-lib">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="lambert31" target="#lambert31"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+      </node>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>24.000000</frame_rate>
+        </technique>
+        <technique profile="FCOLLADA">
+          <start_time>0.041667</start_time>
+          <end_time>8.333333</end_time>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Collision_Rockwall_01"/>
+  </scene>
+</COLLADA>

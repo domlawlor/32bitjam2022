@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Crane.obj-4718e908f60602e4d5509e297e19ede6.mesh"
+
+[deps]
+
+files=[ "res://.import/Crane.obj-4718e908f60602e4d5509e297e19ede6.mesh" ]
+
+source_file="res://Art/Boat/Crane.obj"
+dest_files=[ "res://.import/Crane.obj-4718e908f60602e4d5509e297e19ede6.mesh", "res://.import/Crane.obj-4718e908f60602e4d5509e297e19ede6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.025, 0.025, 0.025 )
+offset_mesh=Vector3( 0.094, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

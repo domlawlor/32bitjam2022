@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GameplayScene.gd" type="Script" id=1]
+[ext_resource path="res://TestEnvironment.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Boat.tscn" type="PackedScene" id=3]
+<<<<<<< HEAD
+[ext_resource path="res://GameplayUI.gd" type="Script" id=5]
+=======
+[ext_resource path="res://GameplayUI.gd" type="Script" id=4]
+>>>>>>> 26d04cf (wip)
+
+[sub_resource type="CylinderShape" id=1]
+height = 3.25762
+radius = 1.9833
+
+[sub_resource type="Environment" id=2]
+ambient_light_color = Color( 1, 1, 1, 1 )
+fog_enabled = true
+fog_color = Color( 0.282353, 0.419608, 0.372549, 1 )
+fog_sun_color = Color( 0.270588, 0.501961, 0.419608, 1 )
+fog_depth_begin = 0.0
+fog_depth_end = 30.0
+fog_depth_curve = 4.75682
+
+[node name="GameplayScene" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.676129, -0.31677, 0.665211, 0.0405374, 0.917485, 0.395698, -0.735667, -0.240577, 0.63318, 3.59084, 3.01017, 4.80668 )
+current = true
+
+[node name="TestEnvironment" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="Boat" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.201907, 0 )
+
+[node name="ShopEntranceTrigger" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0.1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="ShopEntranceTrigger"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.984905, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="GameplayLayer" type="CanvasLayer" parent="."]
+
+[node name="GameplayUI" type="Control" parent="GameplayLayer"]
+margin_right = 320.0
+margin_bottom = 240.0
+script = ExtResource( 5 )
+
+[node name="FishingStateString" type="Label" parent="GameplayLayer/GameplayUI"]
+margin_right = 128.0
+margin_bottom = 14.0
+text = "IDLE FISHING STATE"
+
+[node name="FishingUI" type="Control" parent="GameplayLayer/GameplayUI"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="FishStamina" type="Control" parent="GameplayLayer/GameplayUI/FishingUI"]
+margin_top = 41.0
+margin_right = 210.0
+margin_bottom = 55.0
+
+[node name="Label" type="Label" parent="GameplayLayer/GameplayUI/FishingUI/FishStamina"]
+margin_right = 81.0
+margin_bottom = 14.0
+text = "Fish Stamina"
+
+[node name="ProgressBar" type="ProgressBar" parent="GameplayLayer/GameplayUI/FishingUI/FishStamina"]
+margin_left = 85.0
+margin_right = 210.0
+margin_bottom = 14.0
+value = 100.0
+percent_visible = false
+
+[node name="BoatStamina" type="Control" parent="GameplayLayer/GameplayUI/FishingUI"]
+margin_top = 25.0
+margin_right = 211.0
+margin_bottom = 39.0
+
+[node name="Label" type="Label" parent="GameplayLayer/GameplayUI/FishingUI/BoatStamina"]
+margin_right = 81.0
+margin_bottom = 14.0
+text = "Boat Stamina"
+
+[node name="ProgressBar" type="ProgressBar" parent="GameplayLayer/GameplayUI/FishingUI/BoatStamina"]
+margin_left = 85.0
+margin_right = 210.0
+margin_bottom = 14.0
+value = 100.0
+percent_visible = false
+
+[node name="Capsized" type="Label" parent="GameplayLayer/GameplayUI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -34.5
+margin_top = -7.0
+margin_right = 34.5
+margin_bottom = 7.0
+text = "Capsized!!!"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[connection signal="body_entered" from="ShopEntranceTrigger" to="." method="_on_ShopEntranceTrigger_body_entered"]
+[connection signal="body_exited" from="ShopEntranceTrigger" to="." method="_on_ShopEntranceTrigger_body_exited"]

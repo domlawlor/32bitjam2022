@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/32bgj22_SFX_Quicktime_Pass.ogg-f4172b9783ae1a6bd507b7944666880f.oggstr"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_Quicktime_Pass.ogg"
+dest_files=[ "res://.import/32bgj22_SFX_Quicktime_Pass.ogg-f4172b9783ae1a6bd507b7944666880f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

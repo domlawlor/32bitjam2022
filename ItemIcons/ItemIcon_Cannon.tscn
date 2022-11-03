@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ItemIcons/ItemIcon_Base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Art/Icons/Cannon - Copy.png" type="Texture" id=2]
+
+[node name="ItemIcon_Cannon" instance=ExtResource( 1 )]
+suppliesType = false
+unlockProgression = 1
+description = "Used to destroy obstacles in the world"
+price = 160
+itemEnum = 3
+
+[node name="IconGFX" parent="." index="3"]
+texture = ExtResource( 2 )

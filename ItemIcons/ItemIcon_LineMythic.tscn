@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ItemIcons/ItemIcon_Base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Art/Icons/Line02 - Copy.png" type="Texture" id=2]
+
+[node name="ItemIcon_LineMythic" instance=ExtResource( 1 )]
+unlockProgression = 2
+description = "Gives a lot more time to hook fish"
+price = 30
+itemEnum = 10
+
+[node name="IconGFX" parent="." index="3"]
+texture = ExtResource( 2 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/32bgj22_SFX_UI_SwooshOption2.ogg-e4b243d92e49111f1e8be70f4492719d.oggstr"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_UI_SwooshOption2.ogg"
+dest_files=[ "res://.import/32bgj22_SFX_UI_SwooshOption2.ogg-e4b243d92e49111f1e8be70f4492719d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://WorldCollectables/WorldCollectable.gd" type="Script" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 0.5, 0.5, 0.5 )
+
+[sub_resource type="CylinderShape" id=2]
+height = 0.508313
+radius = 1.54328
+
+[node name="WorldCollectable" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+
+[node name="PickupArea" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="PickupArea"]
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="PickupArea" to="." method="_on_PickupArea_body_entered"]

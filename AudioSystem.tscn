@@ -1,0 +1,158 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://Audio/32bitGJ_MainLoop.ogg" type="AudioStream" id=1]
+[ext_resource path="res://AudioSystem.gd" type="Script" id=2]
+[ext_resource path="res://Audio/32bitGJ_CreepyWatersLoop.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Audio/32bgj22_SFX_UI_Purchase.wav" type="AudioStream" id=4]
+[ext_resource path="res://Audio/32bgj22_SFX_UI_ScrollSmall.wav" type="AudioStream" id=5]
+[ext_resource path="res://Audio/32bgj22_SFX_UI_Back.wav" type="AudioStream" id=6]
+[ext_resource path="res://Audio/32bgj22_SFX_BoatIdle (1).ogg" type="AudioStream" id=7]
+[ext_resource path="res://Audio/32bgj22_SFX_BoatMovement (1).ogg" type="AudioStream" id=8]
+[ext_resource path="res://Audio/32bgj22_SFX_UI_Select.wav" type="AudioStream" id=9]
+[ext_resource path="res://Audio/32bitGJ_ShopLoop.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Audio/32bgj22_SFX_HookDrop.wav" type="AudioStream" id=11]
+[ext_resource path="res://Audio/32bitGJ_ManVsFishLoop.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Audio/32bgj22_SFX_UI_GameStart.wav" type="AudioStream" id=13]
+[ext_resource path="res://Audio/32bgj22_SFX_UI_Invalid.wav" type="AudioStream" id=14]
+[ext_resource path="res://Audio/32bgj22_SFX_Chest.wav" type="AudioStream" id=15]
+[ext_resource path="res://Audio/32bgj22_SFX_UI_SwooshOption2.wav" type="AudioStream" id=16]
+[ext_resource path="res://Audio/ambience_filtered.ogg" type="AudioStream" id=17]
+[ext_resource path="res://Audio/32bgj22_SFX_QuestItem.wav" type="AudioStream" id=18]
+[ext_resource path="res://Audio/32bgj22_SFX_Capsized.wav" type="AudioStream" id=19]
+[ext_resource path="res://Audio/32bgj22_SFX_Splash_Size3.wav" type="AudioStream" id=20]
+[ext_resource path="res://Audio/32bgj22_SFX_Splash_Size4.wav" type="AudioStream" id=21]
+[ext_resource path="res://Audio/32bgj22_SFX_Splash_Size5.wav" type="AudioStream" id=22]
+[ext_resource path="res://Audio/32bgj22_SFX_Quicktime_Miss.wav" type="AudioStream" id=23]
+[ext_resource path="res://Audio/32bgj22_SFX_Quicktime_Pass.wav" type="AudioStream" id=24]
+[ext_resource path="res://Audio/32bgj22_SFX_FishingLoop.ogg" type="AudioStream" id=25]
+[ext_resource path="res://Audio/32bgj22_SFX_FishWarpIntoBoat.wav" type="AudioStream" id=26]
+[ext_resource path="res://Audio/32bgj22_SFX_Fishing_Reel.wav" type="AudioStream" id=27]
+[ext_resource path="res://Audio/32bgj22_SFX_RocksImpact2.wav" type="AudioStream" id=28]
+[ext_resource path="res://Audio/32bgj22_SFX_Canon.wav" type="AudioStream" id=29]
+[ext_resource path="res://Audio/32bgj22_SFX_Splash_Size2.wav" type="AudioStream" id=30]
+
+[node name="AudioSystem" type="Control"]
+pause_mode = 2
+script = ExtResource( 2 )
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="CreepyWaters" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -3.0
+
+[node name="FishingTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -3.0
+
+[node name="ShopTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -3.0
+
+[node name="MusicCrossfadeTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="GameStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+
+[node name="UI_Scroll" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="UI_ScrollSwoosh" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -3.0
+
+[node name="UI_Select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="UI_Purchase" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="UI_Invalid" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[node name="UI_Back" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="ChestPickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -3.0
+
+[node name="QuestPickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -3.0
+
+[node name="HookDrop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -6.0
+
+[node name="ReelIn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 27 )
+volume_db = -4.0
+
+[node name="Capsize" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+volume_db = -4.0
+
+[node name="FishingLoop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+volume_db = -10.0
+
+[node name="QTESuccess" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+volume_db = -4.0
+
+[node name="QTEFail" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+volume_db = -6.0
+
+[node name="Splash1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 30 )
+volume_db = -4.0
+
+[node name="Splash2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+volume_db = -4.0
+
+[node name="Splash3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+volume_db = -4.0
+
+[node name="Splash4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+volume_db = -4.0
+
+[node name="PokeballShrink" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 26 )
+volume_db = -2.0
+
+[node name="BoatIdle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -10.0
+
+[node name="BoatMove" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -15.0
+
+[node name="BoatFadeTimer" type="Timer" parent="BoatMove"]
+wait_time = 4.0
+one_shot = true
+
+[node name="CannonBlast" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 29 )
+volume_db = -3.0
+
+[node name="RocksBreak" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+volume_db = -5.0
+
+[node name="RocksBreakTimer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[connection signal="timeout" from="RocksBreakTimer" to="." method="_on_RocksBreakTimer_timeout"]

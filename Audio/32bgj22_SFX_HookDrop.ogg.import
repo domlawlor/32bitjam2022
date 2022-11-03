@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/32bgj22_SFX_HookDrop.ogg-e5b30e4220aa970a9b7dbfca9bcac1ff.oggstr"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_HookDrop.ogg"
+dest_files=[ "res://.import/32bgj22_SFX_HookDrop.ogg-e5b30e4220aa970a9b7dbfca9bcac1ff.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

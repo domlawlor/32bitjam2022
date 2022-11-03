@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/32bgj22_SFX_Capsized.ogg-fa716c716f3f238635c4c22e8f1b98e8.oggstr"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_Capsized.ogg"
+dest_files=[ "res://.import/32bgj22_SFX_Capsized.ogg-fa716c716f3f238635c4c22e8f1b98e8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

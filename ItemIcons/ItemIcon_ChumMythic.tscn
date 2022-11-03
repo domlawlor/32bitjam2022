@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ItemIcons/ItemIcon_Base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Art/Icons/Bait08 - Copy.png" type="Texture" id=2]
+
+[node name="ItemIcon_ChumMythic" instance=ExtResource( 1 )]
+unlockProgression = 2
+description = "Increases the chance of mythic fish to bite"
+price = 30
+itemEnum = 8
+
+[node name="IconGFX" parent="." index="3"]
+texture = ExtResource( 2 )

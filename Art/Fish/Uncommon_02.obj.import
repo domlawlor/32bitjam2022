@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Uncommon_02.obj-cc74b8a3bbbd7dff5cca6ce6a45cf06b.mesh"
+
+[deps]
+
+files=[ "res://.import/Uncommon_02.obj-cc74b8a3bbbd7dff5cca6ce6a45cf06b.mesh" ]
+
+source_file="res://Art/Fish/Uncommon_02.obj"
+dest_files=[ "res://.import/Uncommon_02.obj-cc74b8a3bbbd7dff5cca6ce6a45cf06b.mesh", "res://.import/Uncommon_02.obj-cc74b8a3bbbd7dff5cca6ce6a45cf06b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.025, 0.025, 0.025 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

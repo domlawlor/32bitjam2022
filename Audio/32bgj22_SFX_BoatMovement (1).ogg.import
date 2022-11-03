@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/32bgj22_SFX_BoatMovement (1).ogg-4f87ea38d2b09aaa17f6ed06208c73b3.oggstr"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_BoatMovement (1).ogg"
+dest_files=[ "res://.import/32bgj22_SFX_BoatMovement (1).ogg-4f87ea38d2b09aaa17f6ed06208c73b3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

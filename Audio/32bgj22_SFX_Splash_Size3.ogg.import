@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/32bgj22_SFX_Splash_Size3.ogg-a12c3cc19bdde2692d0ba045381ab1f8.oggstr"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_Splash_Size3.ogg"
+dest_files=[ "res://.import/32bgj22_SFX_Splash_Size3.ogg-a12c3cc19bdde2692d0ba045381ab1f8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

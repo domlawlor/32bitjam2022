@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/32bgj22_SFX_BoatIdle (1).ogg-c1ab7fc7b3f97a7ebb28982015cc2793.oggstr"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_BoatIdle (1).ogg"
+dest_files=[ "res://.import/32bgj22_SFX_BoatIdle (1).ogg-c1ab7fc7b3f97a7ebb28982015cc2793.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

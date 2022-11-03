@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/32bgj22_SFX_HookDrop.wav-ca228524b1ffdb49dd9320af101072bc.sample"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_HookDrop.wav"
+dest_files=[ "res://.import/32bgj22_SFX_HookDrop.wav-ca228524b1ffdb49dd9320af101072bc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/32bitGJ_ManVsFish.mp3-6a9a236d27a7e5c7e80c50d88af03a21.mp3str"
+
+[deps]
+
+source_file="res://Audio/32bitGJ_ManVsFish.mp3"
+dest_files=[ "res://.import/32bitGJ_ManVsFish.mp3-6a9a236d27a7e5c7e80c50d88af03a21.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

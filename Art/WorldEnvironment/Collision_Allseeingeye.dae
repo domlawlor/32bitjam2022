@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author/>
+      <authoring_tool>FBX COLLADA exporter</authoring_tool>
+      <comments/>
+    </contributor>
+    <created>2022-10-29T12:58:34Z</created>
+    <keywords/>
+    <modified>2022-10-29T12:58:34Z</modified>
+    <revision/>
+    <subject/>
+    <title/>
+    <unit meter="0.010000" name="centimeter"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_materials>
+    <material id="lambert31" name="lambert31">
+      <instance_effect url="#lambert31-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="lambert31-fx" name="lambert31">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.088312  0.088312 0.088312 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">1.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Collision_Allseeingeye-lib" name="Collision_AllseeingeyeMesh">
+      <mesh>
+        <source id="Collision_Allseeingeye-POSITION">
+          <float_array id="Collision_Allseeingeye-POSITION-array" count="48">
+6555.347656 -86.141640 -2541.660645
+6416.250000 -102.156586 -2449.239746
+6320.265625 -120.537872 -2304.232910
+7183.505859 -104.374191 -2703.044678
+6981.518066 -94.866791 -2684.363037
+6762.996094 -84.398888 -2638.884766
+6244.580078 -122.542213 -2176.829102
+6077.530273 -117.939774 -1969.779785
+6565.731934 580.632690 -2546.312500
+6427.891602 586.535706 -2458.153076
+6330.449707 590.506592 -2314.825195
+7197.165039 562.467834 -2701.229248
+6995.017578 568.030457 -2686.702637
+6774.805664 574.468140 -2645.660156
+6254.266602 594.356567 -2188.037598
+6087.182617 596.386047 -1980.948486
+</float_array>
+          <technique_common>
+            <accessor source="#Collision_Allseeingeye-POSITION-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Collision_Allseeingeye-Normal0">
+          <float_array id="Collision_Allseeingeye-Normal0-array" count="126">
+-0.546215 0.000493 -0.837645
+-0.546215 0.000493 -0.837645
+-0.546215 0.000493 -0.837645
+-0.546215 0.000493 -0.837645
+-0.546215 0.000493 -0.837645
+-0.546215 0.000493 -0.837645
+-0.830556 0.005190 -0.556911
+-0.830556 0.005190 -0.556911
+-0.830556 0.005190 -0.556911
+-0.830556 0.005190 -0.556911
+-0.830556 0.005190 -0.556911
+-0.830556 0.005190 -0.556911
+-0.081849 0.001279 -0.996644
+-0.081849 0.001279 -0.996644
+-0.081849 0.001279 -0.996644
+-0.081849 0.001279 -0.996644
+-0.081849 0.001279 -0.996644
+-0.081849 0.001279 -0.996644
+-0.193591 -0.003059 -0.981078
+-0.193591 -0.003059 -0.981078
+-0.193591 -0.003059 -0.981078
+-0.193591 -0.003059 -0.981078
+-0.193591 -0.003059 -0.981078
+-0.193591 -0.003059 -0.981078
+-0.426632 -0.000654 -0.904425
+-0.426632 -0.000654 -0.904425
+-0.426632 -0.000654 -0.904425
+-0.426632 -0.000654 -0.904425
+-0.426632 -0.000654 -0.904425
+-0.426632 -0.000654 -0.904425
+-0.858433 0.004115 -0.512909
+-0.858433 0.004115 -0.512909
+-0.858433 0.004115 -0.512909
+-0.858433 0.004115 -0.512909
+-0.858433 0.004115 -0.512909
+-0.858433 0.004115 -0.512909
+-0.778268 0.000698 -0.627931
+-0.778269 0.000698 -0.627931
+-0.778269 0.000698 -0.627931
+-0.778269 0.000698 -0.627931
+-0.778268 0.000698 -0.627931
+-0.778269 0.000698 -0.627931
+</float_array>
+          <technique_common>
+            <accessor source="#Collision_Allseeingeye-Normal0-array" count="42" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Collision_Allseeingeye-UV0">
+          <float_array id="Collision_Allseeingeye-UV0-array" count="56">
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Collision_Allseeingeye-UV0-array" count="28" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Collision_Allseeingeye-VERTEX">
+          <input semantic="POSITION" source="#Collision_Allseeingeye-POSITION"/>
+        </vertices>
+        <triangles count="14" material="lambert31">
+          <input semantic="VERTEX" offset="0" source="#Collision_Allseeingeye-VERTEX"/>
+          <input semantic="NORMAL" offset="1" source="#Collision_Allseeingeye-Normal0"/>
+          <input semantic="TEXCOORD" offset="2" set="0" source="#Collision_Allseeingeye-UV0"/>
+          <p> 1 0 1 9 1 2 0 2 0 0 3 0 9 4 2 8 5 3 10 6 6 1 7 4 2 8 5 1 9 4 10 10 6 9 11 7 4 12 9 11 13 11 3 14 8 11 15 11 4 16 9 12 17 10 5 18 13 12 19 15 4 20 12 12 21 15 5 22 13 13 23 14 0 24 17 8 25 18 5 26 16 5 27 16 8 28 18 13 29 19 14 30 22 2 31 20 6 32 21 2 33 20 14 34 22 10 35 23 7 36 25 14 37 27 6 38 24 14 39 27 7 40 25 15 41 26</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Collision_Allseeingeye" name="Collision_Allseeingeye">
+      <node name="Collision" id="Collision" sid="Collision">
+        <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+        <extra>
+          <technique profile="FCOLLADA">
+            <visibility>1.000000</visibility>
+          </technique>
+        </extra>
+        <node name="Collision_Allseeingeye" id="Collision_Allseeingeye" sid="Collision_Allseeingeye">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+          <instance_geometry url="#Collision_Allseeingeye-lib">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="lambert31" target="#lambert31"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+      </node>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>24.000000</frame_rate>
+        </technique>
+        <technique profile="FCOLLADA">
+          <start_time>0.041667</start_time>
+          <end_time>8.333333</end_time>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Collision_Allseeingeye"/>
+  </scene>
+</COLLADA>

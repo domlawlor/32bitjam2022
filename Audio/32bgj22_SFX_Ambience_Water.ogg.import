@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/32bgj22_SFX_Ambience_Water.ogg-882ad2684534a8865a8b0c210c99d290.oggstr"
+
+[deps]
+
+source_file="res://Audio/32bgj22_SFX_Ambience_Water.ogg"
+dest_files=[ "res://.import/32bgj22_SFX_Ambience_Water.ogg-882ad2684534a8865a8b0c210c99d290.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,147 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Boat.gd" type="Script" id=1]
+[ext_resource path="res://Art/Boat/Boat.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Art/Boat/Crane.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Art/Boat/Hook.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://FishingLine.gd" type="Script" id=5]
+[ext_resource path="res://CameraPivot.gd" type="Script" id=6]
+[ext_resource path="res://Fish.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Camera.gd" type="Script" id=8]
+[ext_resource path="res://Art/Boat/boat_256.png" type="Texture" id=9]
+[ext_resource path="res://Shaders/psx_lit.gdshader" type="Shader" id=10]
+
+[sub_resource type="Curve" id=6]
+_data = [ Vector2( 0.00165289, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.973554, 1 ), 1.96429, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=7]
+_data = [ Vector2( 0, 0 ), 0.0, 3.53571, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.484527
+height = 1.36588
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 10 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 9 )
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = ExtResource( 10 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 9 )
+
+[sub_resource type="ShaderMaterial" id=10]
+shader = ExtResource( 10 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 9 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.156863, 0.160784, 0.160784, 1 )
+
+[sub_resource type="Curve" id=4]
+resource_local_to_scene = true
+max_value = 0.5
+_data = [ Vector2( 0, 0.0522727 ), 0.0, 0.261364, 0, 1, Vector2( 1, 0.313636 ), 0.261364, 0.0, 1, 0 ]
+
+[sub_resource type="CylinderShape" id=5]
+height = 1.1345
+radius = 4.15322
+
+[node name="Boat" type="KinematicBody" groups=["boat"]]
+collision_layer = 0
+collision_mask = 7
+axis_lock_motion_y = true
+move_lock_y = true
+script = ExtResource( 1 )
+tipOverBoatDegrees = 55.0
+tippingInputAnglePerSec = 8.0
+tippingItemReduceAnglePerSec = 1.0
+lowestTippingDegreesAllowed = -10.0
+maxSpeedBeforeBlockingFishing = 4.0
+timeToLowerRaiseHook = 1.0
+minWaitForFishTime = 2.0
+maxWaitForFishTime = 5.0
+successQTEStopFishPullTime = 0.4
+correctInputCurve = SubResource( 6 )
+incorrectInputCurve = SubResource( 7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.201586, 0 )
+shape = SubResource( 1 )
+
+[node name="Boat" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.120797, 0 )
+mesh = ExtResource( 2 )
+skeleton = NodePath("")
+material/0 = SubResource( 8 )
+
+[node name="Crane" type="MeshInstance" parent="Boat"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+mesh = ExtResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 9 )
+
+[node name="Hook" type="MeshInstance" parent="Boat/Crane"]
+transform = Transform( 1.21822, 0, 0, 0, 1.21822, 0, 0, 0, 1.21822, -1.18974, 1.5, 0 )
+mesh = ExtResource( 4 )
+skeleton = NodePath("../../..")
+material/0 = SubResource( 10 )
+
+[node name="FishingLineEnd" type="Position3D" parent="Boat/Crane/Hook"]
+transform = Transform( 1, 5.82077e-11, -2.32831e-10, -5.82077e-11, 1, 1.05501e-10, 4.65661e-10, 7.3328e-11, 1, -9.17912e-06, -0.0148075, 4.31053e-05 )
+
+[node name="FishingLineState" type="Position3D" parent="Boat/Crane"]
+transform = Transform( 1, 0, 0, 0, 1, 0, -1.06581e-14, 0, 1, -1.19, 1.85065, 0 )
+
+[node name="FishingLineDrawing" type="ImmediateGeometry" parent="Boat/Crane/FishingLineState"]
+transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0 )
+material_override = SubResource( 2 )
+script = ExtResource( 5 )
+
+[node name="Fish" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4377e-08, 1.34712, 1.19406 )
+
+[node name="CameraPivot" type="Spatial" parent="."]
+script = ExtResource( 6 )
+
+[node name="SpringArm" type="SpringArm" parent="CameraPivot"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+spring_length = 7.0
+margin = 1.0
+
+[node name="CameraTargetPos" type="Position3D" parent="CameraPivot/SpringArm"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.8, 0, 0 )
+current = true
+script = ExtResource( 8 )
+moveSpeedCurve = SubResource( 4 )
+maxSpeedDistance = 3.0
+
+[node name="PostCapsizeTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CaughtFishDisplayPos" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50566, 1.90837, 0 )
+
+[node name="NoFishingArea" type="Area" parent="."]
+collision_layer = 0
+collision_mask = 7
+
+[node name="CollisionShape" type="CollisionShape" parent="NoFishingArea"]
+shape = SubResource( 5 )
+
+[connection signal="timeout" from="PostCapsizeTimer" to="." method="_on_PostCapsizeTimer_timeout"]

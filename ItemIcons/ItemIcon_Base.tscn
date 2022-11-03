@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://ItemIcons/InventoryIcon.gd" type="Script" id=1]
+[ext_resource path="res://Art/Icons/IconBackground - Copy.png" type="Texture" id=2]
+[ext_resource path="res://ItemIcon_Base.tres" type="Theme" id=3]
+[ext_resource path="res://Art/Icons/IconHighlight2 - Copy.png" type="Texture" id=4]
+[ext_resource path="res://Art/Icons/SuppliesSelectedBackground.png" type="Texture" id=5]
+[ext_resource path="res://Font/FontSmall.tres" type="Theme" id=6]
+
+[node name="ItemIcon_Base" type="Control"]
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+theme = ExtResource( 3 )
+script = ExtResource( 1 )
+
+[node name="Selected" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = -2.0
+margin_right = 2.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Highlight" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="IconGFX" type="TextureRect" parent="."]
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+expand = true
+
+[node name="Quantity" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -29.0
+margin_top = -29.0
+margin_right = -2.0
+margin_bottom = -22.0
+theme = ExtResource( 6 )
+align = 2
+
+[node name="Price" type="Label" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -30.0
+margin_top = -7.0
+margin_right = 2.0
+margin_bottom = 3.0
+theme = ExtResource( 6 )
+text = "$ 999"
+align = 1
+
+[node name="UpgradeOwned" type="Label" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -33.0
+margin_top = -6.0
+margin_right = 3.0
+margin_bottom = 1.0
+theme = ExtResource( 6 )
+text = "-"
+align = 1
+valign = 2

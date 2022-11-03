@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/32bitGJ_ShopLoop.ogg-8b1e7ae5ed713466121fab3c2e1680fb.oggstr"
+
+[deps]
+
+source_file="res://Audio/32bitGJ_ShopLoop.ogg"
+dest_files=[ "res://.import/32bitGJ_ShopLoop.ogg-8b1e7ae5ed713466121fab3c2e1680fb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
