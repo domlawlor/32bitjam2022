@@ -1,8 +1,8 @@
 ## The Deep Ones
 
-![GameTitleScreenImage](screenshots/exploring.png)
+![GameTitleScreenImage](screenshots/title.png)
 ![ShopKeeperDialogueImage](screenshots/shopDialogue.png)
-![ExploringImage](screenshots/shopDialogue.png)
+![ExploringImage](screenshots/exploring.png)
 ![CaughtFishImage](screenshots/fish.png)
 
 Fully playable at https://bronxtaco.itch.io/the-deep-ones. So check it out! 
