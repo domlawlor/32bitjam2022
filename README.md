@@ -1,9 +1,14 @@
 ## The Deep Ones
+
+![GameTitleScreenImage](screenshots/exploring.png)
+![ShopKeeperDialogueImage](screenshots/shopDialogue.png)
+![ExploringImage](screenshots/shopDialogue.png)
+![CaughtFishImage](screenshots/fish.png)
+
+Fully playable at https://bronxtaco.itch.io/the-deep-ones. So check it out! 
+
 This was an entry for 32-Bit Game Jam. With the aim to create a PS1 era style game. 
 It also had an optional theme of Another World or The Ocean (we kinda did both themes)
-
-It's fully playable at https://bronxtaco.itch.io/the-deep-ones. So check it out! 
-
 
 ### The Team
 Luka Pavlovich - Art (Main world / Shopkeeper / Fish), Game Design
