@@ -13,11 +13,11 @@ enum BlockingUITypes {
 	CHEST_REWARD
 	FISH_SELL
 }
-var BlockingScreen_Inventory = preload("res://BlockingUI_Inventory.tscn")
-var BlockingScreen_Logbook = preload("res://BlockingUI_Logbook.tscn")
-var BlockingScreen_SelectSupplies = preload("res://BlockingUI_SelectSupplies.tscn")
-var BlockingScreen_ChestReward = preload("res://BlockingUI_ChestReward.tscn")
-var BlockingScreen_FishSell = preload("res://BlockingUI_FishSell.tscn")
+var BlockingScreen_Inventory = preload("res://Scenes/BlockingUI_Inventory.tscn")
+var BlockingScreen_Logbook = preload("res://Scenes/BlockingUI_Logbook.tscn")
+var BlockingScreen_SelectSupplies = preload("res://Scenes/BlockingUI_SelectSupplies.tscn")
+var BlockingScreen_ChestReward = preload("res://Scenes/BlockingUI_ChestReward.tscn")
+var BlockingScreen_FishSell = preload("res://Scenes/BlockingUI_FishSell.tscn")
 
 # Godot uses UP LEFT RIGHT ect, bit confusing. This helps
 const X_AXIS = Vector3(1,0,0)

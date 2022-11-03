@@ -1,4 +1,4 @@
-extends "res://BlockingUI.gd"
+extends "res://Scenes/BlockingUI.gd"
 
 var InventoryIcon_ChumUncommon = preload("res://ItemIcons/ItemIcon_ChumUncommon.tscn")
 var InventoryIcon_OrbUncommon = preload("res://ItemIcons/ItemIcon_OrbUncommon.tscn")

@@ -1,4 +1,4 @@
-extends "res://BlockingUI.gd"
+extends "res://Scenes/BlockingUI.gd"
 
 var fishSprite = preload("res://Art/Icons/Bait01.png")
 

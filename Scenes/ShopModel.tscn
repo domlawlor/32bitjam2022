@@ -1,45 +1,18 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Shaders/psx_lit_shop.gdshader" type="Shader" id=1]
-[ext_resource path="res://Shaders/psx_lit_transparent.gdshader" type="Shader" id=2]
-[ext_resource path="res://Art/Shop/Shop Final Files/Textures/shop_room_txtr.jpg" type="Texture" id=3]
-[ext_resource path="res://Art/Shop/Shop Final Files/models/shop_combinedProps.obj" type="ArrayMesh" id=4]
-[ext_resource path="res://Art/Shop/Shop Final Files/Textures/shop_netting_txtr.tga" type="Texture" id=5]
-[ext_resource path="res://Art/Shop/Shop Final Files/Textures/shop_displayCabinet_txtr.jpg" type="Texture" id=6]
-[ext_resource path="res://Art/Shop/Shop Final Files/Textures/shop_atlas.png" type="Texture" id=7]
+[ext_resource path="res://Art/Shop/Shop Final Files/Textures/shop_displayCabinet_txtr.jpg" type="Texture" id=1]
+[ext_resource path="res://Art/Shop/Shop Final Files/Textures/shop_room_txtr.jpg" type="Texture" id=2]
+[ext_resource path="res://Art/Shop/Shop Final Files/Textures/shop_atlas.png" type="Texture" id=3]
+[ext_resource path="res://Art/Shop/Shop Final Files/Textures/shop_netting_txtr.tga" type="Texture" id=4]
+[ext_resource path="res://Shaders/psx_lit_transparent.gdshader" type="Shader" id=5]
+[ext_resource path="res://Shaders/psx_lit_shop.gdshader" type="Shader" id=6]
+[ext_resource path="res://Art/Shop/Shop Final Files/models/shop_combinedProps.obj" type="ArrayMesh" id=7]
 [ext_resource path="res://Art/Shop/Shop Final Files/models/shop_displayCabinet.obj" type="ArrayMesh" id=8]
-[ext_resource path="res://Art/Shop/Shop Final Files/models/Shop_Room_Tiles.obj" type="ArrayMesh" id=9]
-[ext_resource path="res://Art/Shop/Shop Final Files/models/shop_netting.obj" type="ArrayMesh" id=10]
+[ext_resource path="res://Art/Shop/Shop Final Files/models/shop_netting.obj" type="ArrayMesh" id=9]
+[ext_resource path="res://Art/Shop/Shop Final Files/models/Shop_Room_Tiles.obj" type="ArrayMesh" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
-shader = ExtResource( 1 )
-shader_param/precision_multiplier = 1.0
-shader_param/modulate_color = Color( 1, 1, 1, 1 )
-shader_param/uv_scale = Vector2( 1, 1 )
-shader_param/uv_offset = Vector2( 0, 0 )
-shader_param/uv_pan_velocity = Vector2( 0, 0 )
-shader_param/albedoTex = ExtResource( 7 )
-
-[sub_resource type="ShaderMaterial" id=2]
-shader = ExtResource( 1 )
-shader_param/precision_multiplier = 1.0
-shader_param/modulate_color = Color( 1, 1, 1, 1 )
-shader_param/uv_scale = Vector2( 1, 1 )
-shader_param/uv_offset = Vector2( 0, 0 )
-shader_param/uv_pan_velocity = Vector2( 0, 0 )
-shader_param/albedoTex = ExtResource( 6 )
-
-[sub_resource type="ShaderMaterial" id=3]
-shader = ExtResource( 2 )
-shader_param/precision_multiplier = 1.0
-shader_param/modulate_color = Color( 1, 1, 1, 1 )
-shader_param/uv_scale = Vector2( 1, 1 )
-shader_param/uv_offset = Vector2( 0, 0 )
-shader_param/uv_pan_velocity = Vector2( 0, 0 )
-shader_param/albedoTex = ExtResource( 5 )
-
-[sub_resource type="ShaderMaterial" id=4]
-shader = ExtResource( 1 )
+shader = ExtResource( 6 )
 shader_param/precision_multiplier = 1.0
 shader_param/modulate_color = Color( 1, 1, 1, 1 )
 shader_param/uv_scale = Vector2( 1, 1 )
@@ -47,10 +20,37 @@ shader_param/uv_offset = Vector2( 0, 0 )
 shader_param/uv_pan_velocity = Vector2( 0, 0 )
 shader_param/albedoTex = ExtResource( 3 )
 
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 6 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 5 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 4 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 6 )
+shader_param/precision_multiplier = 1.0
+shader_param/modulate_color = Color( 1, 1, 1, 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_pan_velocity = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 2 )
+
 [node name="ShopModel" type="Spatial"]
 
 [node name="CombinedProps" type="MeshInstance" parent="."]
-mesh = ExtResource( 4 )
+mesh = ExtResource( 7 )
 material/0 = SubResource( 1 )
 
 [node name="DisplayCabinet" type="MeshInstance" parent="."]
@@ -58,9 +58,9 @@ mesh = ExtResource( 8 )
 material/0 = SubResource( 2 )
 
 [node name="Netting" type="MeshInstance" parent="."]
-mesh = ExtResource( 10 )
+mesh = ExtResource( 9 )
 material/0 = SubResource( 3 )
 
 [node name="Room" type="MeshInstance" parent="."]
-mesh = ExtResource( 9 )
+mesh = ExtResource( 10 )
 material/0 = SubResource( 4 )

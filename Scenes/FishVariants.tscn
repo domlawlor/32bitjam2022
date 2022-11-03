@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://FishVariants.gd" type="Script" id=1]
-[ext_resource path="res://FishClass.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/FishVariants.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/FishClass.gd" type="Script" id=2]
 [ext_resource path="res://Art/Fish/Common02.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Art/Fish/Mythic01.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Art/Fish/Rare02.tscn" type="PackedScene" id=5]

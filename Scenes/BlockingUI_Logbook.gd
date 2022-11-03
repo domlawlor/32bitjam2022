@@ -1,4 +1,4 @@
-extends "res://BlockingUI.gd"
+extends "res://Scenes/BlockingUI.gd"
 
 const ROTATE_MAX = 150
 

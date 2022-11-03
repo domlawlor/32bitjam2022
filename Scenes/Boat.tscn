@@ -1,13 +1,13 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Boat.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Boat.gd" type="Script" id=1]
 [ext_resource path="res://Art/Boat/Boat.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://Art/Boat/Crane.obj" type="ArrayMesh" id=3]
 [ext_resource path="res://Art/Boat/Hook.obj" type="ArrayMesh" id=4]
-[ext_resource path="res://FishingLine.gd" type="Script" id=5]
-[ext_resource path="res://CameraPivot.gd" type="Script" id=6]
-[ext_resource path="res://Fish.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Camera.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/FishingLine.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/CameraPivot.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Fish.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Camera.gd" type="Script" id=8]
 [ext_resource path="res://Art/Boat/boat_256.png" type="Texture" id=9]
 [ext_resource path="res://Shaders/psx_lit.gdshader" type="Shader" id=10]
 

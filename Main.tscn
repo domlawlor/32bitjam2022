@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://GameplayScene.tscn" type="PackedScene" id=1]
-[ext_resource path="res://TitleScreen.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/GameplayScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/TitleScreen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
-[ext_resource path="res://ShopScene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/ShopScene.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Shaders/pp_lcd_mat.tres" type="Material" id=5]
-[ext_resource path="res://Debug.gd" type="Script" id=6]
-[ext_resource path="res://TransitionManager.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Debug.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/TransitionManager.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Shaders/pp_dither.tres" type="Material" id=8]
-[ext_resource path="res://ViewportContainerPassthruInput.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/ViewportContainerPassthruInput.gd" type="Script" id=9]
 
 [node name="Node" type="Node"]
 

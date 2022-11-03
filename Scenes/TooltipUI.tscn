@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Font/Font.tres" type="Theme" id=1]
 [ext_resource path="res://Art/ControllerIcons/xbox_a.png" type="Texture" id=2]
-[ext_resource path="res://TooltipUI.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/TooltipUI.gd" type="Script" id=3]
 [ext_resource path="res://Art/ControllerIcons/xbox_y.png" type="Texture" id=4]
 [ext_resource path="res://Art/ControllerIcons/Cross.png" type="Texture" id=5]
 [ext_resource path="res://Art/ControllerIcons/Triangle.png" type="Texture" id=6]

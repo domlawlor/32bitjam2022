@@ -17,11 +17,11 @@ config/icon="res://icon.png"
 [autoload]
 
 G="*res://G.gd"
-Events="*res://Events.gd"
+Events="*res://Scenes/Events.gd"
 I="*res://I.gd"
-FishVariants="*res://FishVariants.tscn"
-P="*res://PlayerInventory.tscn"
-Audio="*res://AudioSystem.tscn"
+FishVariants="*res://Scenes/FishVariants.tscn"
+P="*res://Scenes/PlayerInventory.tscn"
+Audio="*res://Scenes/AudioSystem.tscn"
 
 [display]
 
